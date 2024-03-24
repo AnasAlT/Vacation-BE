@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: booking_table
+      author: Anas.AlTowairqi
+      changes:
+        - createTable:
+            tableName: booking
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: INT
+                  constraints:
+                    foreignKeyName: fk_booking_user
+                    references: UM_USER(ID)
+              - column:
+                  name: date_from
+                  type: DATE
+              - column:
+                  name: date_to
+                  type: DATE
+              - column:
+                  name: status
+                  type: VARCHAR(50)

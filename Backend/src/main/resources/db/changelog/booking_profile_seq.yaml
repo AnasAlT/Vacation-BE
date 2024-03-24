@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: booking_profile_seq
+      author: Anas.AlTowairqi
+      changes:
+        - createSequence:
+            sequenceName: SEQ_PROFILE_ID
+            incrementBy: 1
+            startValue: 100000
+        - createSequence:
+            sequenceName: SEQ_BOOKING_ID
+            incrementBy: 1
+            startValue: 100000

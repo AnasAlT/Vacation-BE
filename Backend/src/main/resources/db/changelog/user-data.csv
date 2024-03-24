@@ -1,0 +1,6 @@
+ID,USERNAME,EMAIL,FIRST_NAME,LAST_NAME,PASSWORD
+1,marko.nikolic@nortal.com,marko.nikolic@nortal.com,Marko,Nikolic,$2a$12$GWge6rOdkil8jlyyQ4b3l.TbibV9mgmxFJ88p2g/ikJr65x64bXly
+2,radivoje.dunjerovic@nortal.com,radivoje.dunjerovic@nortal.com,Radivoje,Dundjerovic,$2a$12$GWge6rOdkil8jlyyQ4b3l.TbibV9mgmxFJ88p2g/ikJr65x64bXly
+3,test.user@nortal.com,test.user@nortal.com,Test,User,$2a$12$GWge6rOdkil8jlyyQ4b3l.TbibV9mgmxFJ88p2g/ikJr65x64bXly
+4,test.user1@nortal.com,test.user1@nortal.com,Test,User,$2a$12$GWge6rOdkil8jlyyQ4b3l.TbibV9mgmxFJ88p2g/ikJr65x64bXly
+5,test.user2@nortal.com,test.user2@nortal.com,Test,User,$2a$12$GWge6rOdkil8jlyyQ4b3l.TbibV9mgmxFJ88p2g/ikJr65x64bXly

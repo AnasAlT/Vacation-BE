@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_user_schema
+      author: marko.nikolic
+      changes:
+        - createSequence:
+            sequenceName: SEQ_UM_USER_ID
+            incrementBy: 1
+            startValue: 100000
+        - createTable:
+            tableName: UM_USER
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_UM_USER
+              - column:
+                  name: USERNAME
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: UQ_USERNAME_UM_USER
+              - column:
+                  name: PASSWORD
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: EMAIL
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: UQ_EMAIL_UM_USER
+              - column:
+                  name: FIRST_NAME
+                  type: varchar(250)
+              - column:
+                  name: LAST_NAME
+                  type: varchar(250)
+        - createSequence:
+            sequenceName: SEQ_UM_USER_ROLE_ID
+            incrementBy: 1
+            startValue: 100000
+        - createTable:
+            tableName: UM_USER_ROLE
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_UM_USER_ROLE
+              - column:
+                  name: USER_ID
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ROLE
+                  type: varchar(250)
+        - addForeignKeyConstraint:
+            baseColumnNames: USER_ID
+            baseTableName: UM_USER_ROLE
+            constraintName: FK_UM_USER_ROLE_USER
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: RESTRICT
+            onUpdate: RESTRICT
+            referencedColumnNames: ID
+            referencedTableName: UM_USER
+            validate: true

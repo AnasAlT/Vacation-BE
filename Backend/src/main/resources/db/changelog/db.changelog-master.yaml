@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - include:
+      file: user-model.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: user-data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: user-role-data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: booking_profile_seq.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: update_um_user.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: profile_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: booking_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: country_table.yaml
+      relativeToChangelogFile: true
+

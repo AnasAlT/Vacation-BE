@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: update_um_user
+      author: Anas.AlTowairqi
+      changes:
+        - addColumn:
+            tableName: um_user
+            columns:
+              - column:
+                  name: nationality
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true

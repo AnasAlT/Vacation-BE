@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-initial-user-role_data
+      author: marko.nikolic
+      runOnChange: true
+      onDuplicateKey: update
+      changes:
+        loadUpdateData:
+          columns:
+            - column:
+                header: ID
+                name: ID
+                type: NUMERIC
+            - column:
+                header: USER_ID
+                name: USER_ID
+                type: NUMERIC
+            - column:
+                header: ROLE
+                name: ROLE
+                type: STRING
+          primaryKey: 'ID'
+          tableName: UM_USER_ROLE
+          file: changelog/user-role-data.csv
+          relativeToChangelogFile: true
+          separator: ','
+          quotchar: '""'

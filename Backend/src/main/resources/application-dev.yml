@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://something.webmedia.int:5432/vacation
+    username: vacation
+    password: Intern24#

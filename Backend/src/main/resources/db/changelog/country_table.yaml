@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: country_table
+      author: Anas.AlTowairqi
+      changes:
+        - createTable:
+            tableName: country
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    foreignKeyName: fk_country_user
+                    references: um_user(id)
+              - column:
+                  name: country_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: vacation_days
+                  type: int
+                  defaultValue: 21
+                  constraints:
+                    nullable: false
+

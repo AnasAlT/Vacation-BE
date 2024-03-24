@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: load-initial-user-data
+      author: marko.nikolic
+      runOnChange: true
+      onDuplicateKey: update
+      changes:
+        loadUpdateData:
+          columns:
+            - column:
+                header: ID
+                name: ID
+                type: NUMERIC
+            - column:
+                header: USERNAME
+                name: USERNAME
+                type: STRING
+            - column:
+                header: EMAIL
+                name: EMAIL
+                type: STRING
+            - column:
+                name: FIRST_NAME
+                header: FIRST_NAME
+                type: STRING
+            - column:
+                name: LAST_NAME
+                header: LAST_NAME
+                type: STRING
+            - column:
+                name: PASSWORD
+                header: PASSWORD
+                type: STRING
+          primaryKey: 'ID'
+          tableName: UM_USER
+          file: changelog/user-data.csv
+          relativeToChangelogFile: true
+          separator: ','
+          quotchar: '""'
