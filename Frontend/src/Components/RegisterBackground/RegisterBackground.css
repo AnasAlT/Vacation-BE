@@ -1,0 +1,10 @@
+.logoContainer{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+}
+.NortalLogo{
+    width: 157.34px;
+    height: 40.05px;
+}
